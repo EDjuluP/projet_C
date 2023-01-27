@@ -13,7 +13,7 @@ void Jeu(Joueurs * TabJoueurs)
 
 	// generer les scores de chaque joueur
 
-	/*
+	
 	srand(time(NULL));
 
 	int des[6]; // On fait un tableau pour stocker les valeurs des 6 dés 
@@ -29,7 +29,7 @@ void Jeu(Joueurs * TabJoueurs)
 		}
 		getchar();
 	}
-	*/
+	
 }
 
 int saisiJoueurs(Joueurs * TabJoueurs)
@@ -59,7 +59,7 @@ int saisiJoueurs(Joueurs * TabJoueurs)
 	return nbjoueur;
 }
 
-/*
+
 int calculPoints(Joueurs * TabJoueurs, int * tabJeu)
 {
 	int scoreJoueur = 0;
@@ -147,9 +147,9 @@ int calculPoints(Joueurs * TabJoueurs, int * tabJeu)
 
 	return scoreJoueur;
 }
-*/
 
-/*
+
+
 void AffichageScore(Joueurs * TabJoueurs, int nbJoueur, int winner)
 {
 	if (winner == 1) // Si un gagnant
@@ -157,4 +157,4 @@ void AffichageScore(Joueurs * TabJoueurs, int nbJoueur, int winner)
 
 	}
 }
-*/
+
