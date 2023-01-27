@@ -32,7 +32,7 @@ void Jeu(Joueurs * TabJoueurs)
 	
 }
 
-int saisiJoueurs(Joueurs * TabJoueurs)
+int saisieJoueurs(Joueurs * TabJoueurs)
 {
 	int nbjoueur;
 
