@@ -34,11 +34,11 @@ int main()
 			// Fonction qui va gérer le jeu
 			Jeu(&tabJoueurs);
 		}
-		else if (nombreSaisi == 2) // On va afficher les régles
+		else if (nombreSaisi == 2) // On va afficher les règles
 		{
 			system("CLS");
 
-			// On va ensuite afficher les régles
+			// On va ensuite afficher les règles
 		}
 
 		nombreChoisi = NULL; // On remet à Null
