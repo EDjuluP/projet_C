@@ -6,7 +6,7 @@ typedef struct {
 
 }Joueurs;
 
-int saisiJoueurs(Joueurs ** TabJoueurs);
+int saisieJoueurs(Joueurs ** TabJoueurs);
 void Jeu(Joueurs ** TabJoueurs);
 int calculPoints(Joueurs ** TabJoueurs, int * tabDes);
 void AffichageScore(Joueurs * TabJoueurs, int nbJoueur, int winner);
