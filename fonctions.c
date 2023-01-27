@@ -9,11 +9,61 @@
 
 void Jeu(Joueurs * TabJoueurs)
 {
-	int nbJoueur = saisiJoueurs(TabJoueurs); // Saisi des joueurs
+	int nbJoueur;
+
+	// Saisi des joueurs
+	printf("Entrez le nombre de joueur entre 2 et 6\n\n");
+	scanf("%d", &nbJoueur);
+
+	// la boucle se repète tant que l'utilisateur saisit un chiffre inferieur a 2 ou superieur a 6
+	while (nbJoueur < 2 && nbJoueur > 6)
+	{
+		printf("Entrez le nombre de joueur entre 2 et 6\n\n");
+		scanf("%d", &nbJoueur);
+	}
+
+	TabJoueurs[nbJoueur]; // On crée le tableau des joueurs
+
+	for (int i = 0; i < nbJoueur; i++)
+	{
+		char nom[20];
+		// demander aux joueurs d'entrer leurs noms
+		printf("Entrez le nom du joueur %d:  ", i + 1);
+		scanf("%s", nom);
+
+		int joueurPresent = 0;
+
+		for (int j = 0; j < nbJoueur; j++) // On parcourt notre tableau de joueur
+		{
+			if (strcmp(nom, TabJoueurs[j].nom) == 0)
+			{
+				joueurPresent = 1;
+				break;
+			}
+		}
+
+		while (joueurPresent == 1) // Tant qu'il est déjà présent
+		{
+			printf("\n\nNom deja existant ! Veuillez en saisir un autre SVP ! : ");
+			scanf("%s", nom);
+
+			// ON VA VERIFER QUIL EXISTE OU PAS
+			joueurPresent = 0;
+
+			for (int j = 0; j < nbJoueur; j++) // On parcour notre tableau de joueur
+			{
+				if (strcmp(nom, TabJoueurs[j].nom) == 0)
+				{
+					joueurPresent = 1;
+					break;
+				}
+			}
+		}
+
+		strcpy(TabJoueurs[i].nom, nom);
+	}
 
 	// generer les scores de chaque joueur
-
-	
 	srand(time(NULL));
 
 	int des[6]; // On fait un tableau pour stocker les valeurs des 6 dés 
@@ -29,36 +79,10 @@ void Jeu(Joueurs * TabJoueurs)
 		}
 		getchar();
 	}
+
+	int score = calculPoints(TabJoueurs, des);
 	
 }
-
-int saisieJoueurs(Joueurs * TabJoueurs)
-{
-	int nbjoueur;
-
-	printf("Entrez le nombre de joueur entre 2 et 6\n\n");
-	scanf("%d", &nbjoueur);
-
-	// la boucle se repète tant que l'utilisateur saisit un chiffre inferieur a 2 ou superieur a 6
-	while (nbjoueur < 2 && nbjoueur > 6)
-	{
-		printf("Entrez le nombre de joueur entre 2 et 6\n\n");
-		scanf("%d", &nbjoueur);
-	}
-
-	TabJoueurs[nbjoueur]; // On créer le tableau des joueurs
-
-	for (int i = 0; i < nbjoueur; i++)
-	{
-		// demander aux joueurs d'entrer leurs noms
-
-		printf("Entrez le nom du joueur %d:  ", i + 1);
-		scanf("%s", TabJoueurs[i].nom);
-	}
-
-	return nbjoueur;
-}
-
 
 int calculPoints(Joueurs * TabJoueurs, int * tabJeu)
 {
@@ -136,8 +160,11 @@ int calculPoints(Joueurs * TabJoueurs, int * tabJeu)
 			{
 				scoreJoueur += 100 * tabJeu[i];
 				tabDes[5] = 0;
-			}
+		
+	        }
+			
 		}
+		
 	}
 
 	if (scoreJoueur == 0)
@@ -151,10 +178,10 @@ int calculPoints(Joueurs * TabJoueurs, int * tabJeu)
 
 
 void AffichageScore(Joueurs * TabJoueurs, int nbJoueur, int winner)
-{
-	if (winner == 1) // Si un gagnant
-	{
-
-	}
+{    
+   for( int i = 0; i < nbJoueur; i++)
+   {
+	   
+     	
+   }
 }
-
