@@ -52,7 +52,7 @@ int main()
 		}
 		else if (nombreChoisi == 0)
 		{
-			printf("\n\nA plus ! Merci  !");
+			printf("\n\n Merci ! A plus !");
 		}
 
 	} while (nombreChoisi != 0); // Vérification si fin du jeu
