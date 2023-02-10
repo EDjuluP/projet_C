@@ -1,5 +1,5 @@
-// Par Emmanuel DJULU PENGHE et Junior NGANAMODEÏ //
-// BTS SN1 - Lycée La Providence (Amiens) //
+// Par Emmanuel DJULU PENGHE et Junior NGANAMODEÏ
+// BTS SN1 - Lycée La Providence (Amiens)
 
 
 
