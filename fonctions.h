@@ -5,12 +5,12 @@
 typedef struct {
 
 	char nom[20];
-	int numJoueur;
+	int nbjoueur;
 	int points;
 
 }Joueurs;
 
 int saisieJoueurs(Joueurs ** TabJoueurs);
 void Jeu(Joueurs ** TabJoueurs, int nbJoueurs);
-int calculPoints(Joueurs ** TabJoueurs, int * tabJeu);
-void AffichageScore(Joueurs * TabJoueurs, int nbJoueurs, int winner);
+int calculPoints(Joueurs ** TabJoueurs, int * tabDes);
+void AffichageScore(Joueurs * TabJoueurs, int nbJoueur, int winner);
